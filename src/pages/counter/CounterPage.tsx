@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
-import styles from 'pages/home/Home.module.scss';
+import styles from 'pages/counter/Counter.module.scss';
 
 const cx = classNames.bind(styles);
 
-class Counter extends Component {
+class CounterPage extends Component {
   render() {
     return (
       <div className={cx('counter-container')}>
@@ -14,4 +14,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default CounterPage;

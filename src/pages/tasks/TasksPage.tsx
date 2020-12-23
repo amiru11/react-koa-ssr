@@ -4,7 +4,7 @@ import styles from 'pages/task/Tasks.module.scss';
 
 const cx = classNames.bind(styles);
 
-class Tasks extends Component {
+class TasksPage extends Component {
   render() {
     return (
       <div className={cx('tasks-container')}>
@@ -14,4 +14,4 @@ class Tasks extends Component {
   }
 }
 
-export default Tasks;
+export default TasksPage;

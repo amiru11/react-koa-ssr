@@ -1,6 +1,6 @@
 import loadable from '@loadable/component';
 
-export const Home = loadable(() => import('pages/home/Home'));
-export const Tasks = loadable(() => import('pages/tasks/Tasks'));
-export const Counter = loadable(() => import('pages/counter/Counter'));
-export const NotFound = loadable(() => import('pages/common/NotFound'));
+export const HomePage = loadable(() => import('pages/home/HomePage'));
+export const TasksPage = loadable(() => import('pages/tasks/TasksPage'));
+export const CounterPage = loadable(() => import('pages/counter/CounterPage'));
+export const NotFoundPage = loadable(() => import('pages/common/NotFoundPage'));

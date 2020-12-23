@@ -4,7 +4,7 @@ import styles from 'pages/common/NotFound.module.scss';
 
 const cx = classNames.bind(styles);
 
-class NotFound extends Component {
+class NotFoundPage extends Component {
   render() {
     return (
       <div className={cx('notfound-container')}>
@@ -14,4 +14,4 @@ class NotFound extends Component {
   }
 }
 
-export default NotFound;
+export default NotFoundPage;

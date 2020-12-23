@@ -4,7 +4,7 @@ import styles from 'pages/home/Home.module.scss';
 
 const cx = classNames.bind(styles);
 
-class Home extends Component {
+class HomePage extends Component {
   render() {
     return (
       <div className={cx('home-container')}>
@@ -14,4 +14,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomePage;
