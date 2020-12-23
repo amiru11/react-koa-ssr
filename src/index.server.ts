@@ -18,6 +18,13 @@ app.use(
 );
 
 /**
+ * Koa Router
+ * router.routes(): 요청과 일치하는 라우트를 반환해주는 미들웨어입니다.
+ * router.allowedMethods(): OPTIONS 요청에 응답(Allow 헤더)과 405 Method Not Allowed, 501 Not Implemented를 반환해주는 미들웨어입니다.
+ */
+app.use(router.routes()).use(router.allowedMethods());
+
+/**
  * Koa Middleware for SSR
  */
 app.use(ssrMiddleware);
