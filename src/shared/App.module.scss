@@ -1,3 +1,26 @@
 .app-container {
-  position: relative;
+  height: 100%;
+}
+.main-container {
+  background-color: #ffffff;
+  min-height: calc(100vh - 60px);
+  padding-top: 60px;
+
+  .empty-list {
+    white-space: pre-wrap;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+  }
+  .main-container {
+    section {
+      &.section-info {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
 }
