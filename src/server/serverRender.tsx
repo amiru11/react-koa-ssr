@@ -1,12 +1,15 @@
 import path from 'path';
-import fs from 'fs';
+// import fs from 'fs';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom';
-import { ChunkExtractor } from '@loadable/server';
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { FilledContext, HelmetProvider } from 'react-helmet-async';
 import App from '../shared/App';
 import Html from './Html';
+import rootReducer from '../modules';
 
 /**
  * import ReactDOMServer from 'react-dom/server';
@@ -37,14 +40,16 @@ interface IServerRenderProps {
 }
 
 const statsFile = path.resolve(__dirname, '../build/loadable-stats.json');
-const template = fs.readFileSync(
-  path.join(__dirname, '../../dist/index.html'),
-  { encoding: 'utf8' }
-);
+// const template = fs.readFileSync(
+//   path.join(__dirname, '../../dist/index.html'),
+//   { encoding: 'utf8' }
+// );
 
 // 서버사이드 렌더링을 처리 할 핸들러 함수입니다.
 const serverRender = async ({ url }: IServerRenderProps) => {
   console.log('URL: ', url);
+  // prepare redux store
+  const store = createStore(rootReducer);
   const context = {
     statusCode: 200,
   };
@@ -56,17 +61,22 @@ const serverRender = async ({ url }: IServerRenderProps) => {
   const helmetContext = {} as FilledContext;
 
   const Root: JSX.Element = (
-    <HelmetProvider context={helmetContext}>
-      <StaticRouter location={url} context={context}>
-        <App />
-      </StaticRouter>
-    </HelmetProvider>
+    <ChunkExtractorManager extractor={extractor}>
+      <HelmetProvider context={helmetContext}>
+        <Provider store={store}>
+          <StaticRouter location={url} context={context}>
+            <App />
+          </StaticRouter>
+        </Provider>
+      </HelmetProvider>
+    </ChunkExtractorManager>
   );
 
   const content = ReactDOMServer.renderToString(extractor.collectChunks(Root)); // React 엘리먼트의 초기 HTML을 렌더링합니다.
   const html = (
     <Html
       content={content}
+      reduxState={store.getState()}
       extractor={extractor}
       helmet={helmetContext.helmet}
     />
