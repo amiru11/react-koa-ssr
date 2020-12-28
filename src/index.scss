@@ -7,12 +7,32 @@ body {
     Tahoma, Geneva, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #212529;
   box-sizing: border-box;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: inherit;
+  font-family: inherit;
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  pointer-events: all;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  unicode-bidi: embed;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
 }
 
 code {
