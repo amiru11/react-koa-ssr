@@ -81,10 +81,9 @@ module.exports = {
             options: {
               importLoaders: 1,
               sourceMap: false,
-              modules: {
-                exportOnlyLocals: true,
-              },
+              modules: false,
             },
+            sideEffects: true,
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
           // using the extension .module.css
@@ -109,13 +108,12 @@ module.exports = {
                 options: {
                   importLoaders: 3,
                   sourceMap: false,
-                  modules: {
-                    exportOnlyLocals: true,
-                  },
+                  modules: false,
                 },
               },
               require.resolve('sass-loader'),
             ],
+            sideEffects: true,
           },
           {
             test: sassModuleRegex,

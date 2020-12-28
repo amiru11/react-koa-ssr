@@ -100,7 +100,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 30);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,103 +123,13 @@ module.exports = require("classnames/bind");
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _classCallCheck; });
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+module.exports = __webpack_require__(31);
+
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createClass; });
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
-/* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
-/* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__);
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(subClass, superClass);
-}
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createSuper; });
-/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
-/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(27);
-/* harmony import */ var _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28);
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1___default()();
-  return function _createSuperInternal() {
-    var Super = _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(this).constructor;
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result);
-  };
-}
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(29);
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,7 +155,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 // EXTERNAL MODULE: external "typesafe-actions"
-var external_typesafe_actions_ = __webpack_require__(12);
+var external_typesafe_actions_ = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./src/modules/counter.ts
 
@@ -288,13 +198,13 @@ var reducer = Object(external_typesafe_actions_["createReducer"])(initialState, 
 /* harmony default export */ var counter = __webpack_exports__["b"] = (reducer);
 
 /***/ }),
-/* 9 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
 
 /***/ }),
-/* 10 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -302,7 +212,7 @@ module.exports = require("react-redux");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TasksPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CounterPage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NotFoundPage; });
-/* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
 /* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_loadable_component__WEBPACK_IMPORTED_MODULE_0__);
 
 var HomePage = _loadable_component__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -499,34 +409,124 @@ var NotFoundPage = _loadable_component__WEBPACK_IMPORTED_MODULE_0___default()({
 });
 
 /***/ }),
-/* 11 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("@loadable/component");
 
 /***/ }),
-/* 12 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("typesafe-actions");
 
 /***/ }),
-/* 13 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("path");
 
 /***/ }),
-/* 14 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 15 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-helmet-async");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _classCallCheck; });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createClass; });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
+/* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
+/* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__);
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(subClass, superClass);
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createSuper; });
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
+/* harmony import */ var _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(30);
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _babel_runtime_helpers_esm_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_1___default()();
+  return function _createSuperInternal() {
+    var Super = _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_0___default()(this).constructor;
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result);
+  };
+}
 
 /***/ }),
 /* 16 */
@@ -554,18 +554,6 @@ module.exports = require("@babel/runtime/helpers/esm/getPrototypeOf");
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(3);
-
-// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js
-var inherits = __webpack_require__(5);
-
-// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createSuper.js
-var createSuper = __webpack_require__(6);
-
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
@@ -584,36 +572,15 @@ var bind_default = /*#__PURE__*/__webpack_require__.n(bind_);
 
 
 
-
-
-
-
 var cx = bind_default.a.bind(Home_module);
 
-var HomePage_HomePage = /*#__PURE__*/function (_Component) {
-  Object(inherits["a" /* default */])(HomePage, _Component);
+function HomePage() {
+  return /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: cx('home-container')
+  }, /*#__PURE__*/external_react_default.a.createElement("h1", null, "Home"));
+}
 
-  var _super = Object(createSuper["a" /* default */])(HomePage);
-
-  function HomePage() {
-    Object(classCallCheck["a" /* default */])(this, HomePage);
-
-    return _super.apply(this, arguments);
-  }
-
-  Object(createClass["a" /* default */])(HomePage, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/external_react_default.a.createElement("div", {
-        className: cx('home-container')
-      }, /*#__PURE__*/external_react_default.a.createElement("h1", null, "Home"));
-    }
-  }]);
-
-  return HomePage;
-}(external_react_["Component"]);
-
-/* harmony default export */ var home_HomePage = __webpack_exports__["default"] = (HomePage_HomePage);
+/* harmony default export */ var home_HomePage = __webpack_exports__["default"] = (HomePage);
 
 /***/ }),
 /* 20 */
@@ -624,16 +591,16 @@ var HomePage_HomePage = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(3);
+var classCallCheck = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(4);
+var createClass = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js
-var inherits = __webpack_require__(5);
+var inherits = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createSuper.js
-var createSuper = __webpack_require__(6);
+var createSuper = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
@@ -697,10 +664,10 @@ var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "react-redux"
-var external_react_redux_ = __webpack_require__(9);
+var external_react_redux_ = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/modules/counter.ts + 1 modules
-var counter = __webpack_require__(8);
+var counter = __webpack_require__(4);
 
 // EXTERNAL MODULE: external "classnames/bind"
 var bind_ = __webpack_require__(2);
@@ -772,16 +739,16 @@ function CounterPage() {
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(3);
+var classCallCheck = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(4);
+var createClass = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js
-var inherits = __webpack_require__(5);
+var inherits = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createSuper.js
-var createSuper = __webpack_require__(6);
+var createSuper = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
@@ -852,30 +819,146 @@ module.exports = require("@koa/router");
 
 /***/ }),
 /* 26 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = require("@babel/runtime/helpers/esm/setPrototypeOf");
+"use strict";
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".header__container{background-color:#ffffff;box-shadow:rgba(0,0,0,0.18) 0px 1px 2px;display:flex;align-items:center;justify-content:space-between;width:100%;position:fixed;top:0;left:50%;height:60px;transform:translateX(-50%);transition:background-color 0.25s ease-in-out;z-index:10}.header__wrap{display:flex;align-items:center;justify-content:space-between;max-width:1024px;margin:0 auto;width:100%}.nav__container ul{display:flex}.nav__container ul li{position:relative;text-align:center}.nav__container ul li>a{color:#8e8e8e;display:inline-block;font-size:20px;font-weight:normal;line-height:80px;width:100%}.nav__container ul li:hover a{color:#313439}.nav__container ul li .active{color:#313439}.nav__container ul li+li{margin-left:30px}\n", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["a"] = (___CSS_LOADER_EXPORT___);
+
 
 /***/ }),
 /* 27 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("@babel/runtime/helpers/esm/isNativeReflectConstruct");
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+  return "/*# ".concat(data, " */");
+}
 
 /***/ }),
 /* 28 */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/esm/possibleConstructorReturn");
+module.exports = require("@babel/runtime/helpers/esm/setPrototypeOf");
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports) {
 
-module.exports = require("regenerator-runtime");
+module.exports = require("@babel/runtime/helpers/esm/isNativeReflectConstruct");
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/esm/possibleConstructorReturn");
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports) {
+
+module.exports = require("regenerator-runtime");
+
+/***/ }),
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -887,7 +970,7 @@ var external_koa_ = __webpack_require__(23);
 var external_koa_default = /*#__PURE__*/__webpack_require__.n(external_koa_);
 
 // EXTERNAL MODULE: external "path"
-var external_path_ = __webpack_require__(13);
+var external_path_ = __webpack_require__(9);
 var external_path_default = /*#__PURE__*/__webpack_require__.n(external_path_);
 
 // EXTERNAL MODULE: external "koa-static"
@@ -899,7 +982,7 @@ var router_ = __webpack_require__(25);
 var router_default = /*#__PURE__*/__webpack_require__.n(router_);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(7);
+var regenerator = __webpack_require__(3);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
@@ -947,10 +1030,10 @@ var server_ = __webpack_require__(16);
 var server_default = /*#__PURE__*/__webpack_require__.n(server_);
 
 // EXTERNAL MODULE: external "redux"
-var external_redux_ = __webpack_require__(14);
+var external_redux_ = __webpack_require__(10);
 
 // EXTERNAL MODULE: external "react-redux"
-var external_react_redux_ = __webpack_require__(9);
+var external_react_redux_ = __webpack_require__(5);
 
 // EXTERNAL MODULE: external "react-router-dom"
 var external_react_router_dom_ = __webpack_require__(1);
@@ -959,7 +1042,7 @@ var external_react_router_dom_ = __webpack_require__(1);
 var external_loadable_server_ = __webpack_require__(17);
 
 // EXTERNAL MODULE: external "react-helmet-async"
-var external_react_helmet_async_ = __webpack_require__(15);
+var external_react_helmet_async_ = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./src/config/routes.ts
 var PATH_HOME = '/';
@@ -967,7 +1050,7 @@ var PATH_COUNTER = '/counter';
 var PATH_TASKS = '/tasks';
 var PATH_NOTFOUND = '/notfound';
 // EXTERNAL MODULE: ./src/pages/index.ts
-var pages = __webpack_require__(10);
+var pages = __webpack_require__(6);
 
 // CONCATENATED MODULE: ./src/shared/Routes.tsx
 
@@ -1011,21 +1094,15 @@ var bind_default = /*#__PURE__*/__webpack_require__.n(bind_);
 	"empty-list": "App_empty-list__28wZD"
 });
 
-// CONCATENATED MODULE: ./src/components/common/Header.scss
-// Exports
-/* harmony default export */ var Header = ({
-	"header__container": "_2AOzfdoo8_YLgg7uCpIt2H",
-	"header__wrap": "_3oEOLEfjNlFGRpt2dZErPz",
-	"nav__container": "_3z3WnYC7qfAiUIxdaS2fk3",
-	"active": "_3lZHaDOStBax8pRvUNuO4n"
-});
+// EXTERNAL MODULE: ./src/components/common/Header.scss
+var Header = __webpack_require__(26);
 
 // CONCATENATED MODULE: ./src/components/common/Header.tsx
 
 
 
 
-var cx = bind_default.a.bind(Header);
+var cx = bind_default.a.bind(Header["a" /* default */]);
 
 function Header_Header() {
   return /*#__PURE__*/external_react_default.a.createElement("header", {
@@ -1141,7 +1218,7 @@ function Html(_ref) {
 
 /* harmony default export */ var server_Html = (Html);
 // EXTERNAL MODULE: ./src/modules/counter.ts + 1 modules
-var counter = __webpack_require__(8);
+var counter = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/modules/index.ts
 
