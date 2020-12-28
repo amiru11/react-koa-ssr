@@ -95,7 +95,6 @@ module.exports = {
               sourceMap: false,
               modules: {
                 getLocalIdent: getCSSModuleLocalIdent,
-                exportOnlyLocals: true,
               },
             },
           },
@@ -125,7 +124,6 @@ module.exports = {
                   sourceMap: false,
                   modules: {
                     getLocalIdent: getCSSModuleLocalIdent,
-                    exportOnlyLocals: true,
                   },
                 },
               },

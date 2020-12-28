@@ -2,7 +2,7 @@ import React from 'react';
 import Routes from 'shared/Routes';
 import { Helmet } from 'react-helmet-async';
 import classNames from 'classnames/bind';
-import styles from 'shared/App.module.scss';
+import styles from 'shared/App.scss';
 
 import Header from 'components/common/Header';
 
