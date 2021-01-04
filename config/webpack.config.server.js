@@ -17,7 +17,7 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 
 const imageInlineSizeLimit = parseInt(
-  process.env.IMAGE_INLINE_SIZE_LIMIT || '10000',
+  process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
 );
 
 // Check if TypeScript is setup
@@ -53,7 +53,7 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
               customize: require.resolve(
-                'babel-preset-react-app/webpack-overrides',
+                'babel-preset-react-app/webpack-overrides'
               ),
 
               plugins: [
@@ -79,8 +79,11 @@ module.exports = {
             exclude: cssModuleRegex,
             loader: require.resolve('css-loader'),
             options: {
-              onlyLocals: true,
+              importLoaders: 1,
+              sourceMap: false,
+              modules: false,
             },
+            sideEffects: true,
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
           // using the extension .module.css
@@ -88,9 +91,11 @@ module.exports = {
             test: cssModuleRegex,
             loader: require.resolve('css-loader'),
             options: {
-              onlyLocals: true,
-              module: true,
-              getLocalIdent: getCSSModuleLocalIdent,
+              importLoaders: 1,
+              sourceMap: false,
+              modules: {
+                getLocalIdent: getCSSModuleLocalIdent,
+              },
             },
           },
           {
@@ -100,11 +105,14 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  onlyLocals: true,
+                  importLoaders: 3,
+                  sourceMap: false,
+                  modules: false,
                 },
               },
               require.resolve('sass-loader'),
             ],
+            sideEffects: true,
           },
           {
             test: sassModuleRegex,
@@ -112,9 +120,11 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  onlyLocals: true,
-                  module: true,
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  importLoaders: 3,
+                  sourceMap: false,
+                  modules: {
+                    getLocalIdent: getCSSModuleLocalIdent,
+                  },
                 },
               },
               require.resolve('sass-loader'),
@@ -141,8 +151,8 @@ module.exports = {
       modules.additionalModulePaths || []
     ),
     extensions: paths.moduleFileExtensions
-      .map(ext => `.${ext}`)
-      .filter(ext => useTypeScript || !ext.includes('ts')),
+      .map((ext) => `.${ext}`)
+      .filter((ext) => useTypeScript || !ext.includes('ts')),
   },
   externals: [nodeExternals()],
   plugins: [
@@ -174,11 +184,12 @@ module.exports = {
         // The formatter is invoked directly in WebpackDevServerUtils during development
         formatter: typescriptFormatter,
       }),
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
   ].filter(Boolean),
   optimization: {
     minimize: false,
   },
   node: {
     __dirname: false,
-  }
+  },
 };
