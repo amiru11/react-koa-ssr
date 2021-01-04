@@ -13,15 +13,6 @@ function CounterPage(): JSX.Element {
   const count = useSelector((state: RootState) => state.counter.count); // Get State from redux
   const dispatch = useDispatch(); // Get Dispatch from redux
 
-  // const [count, setCount] = useState<number>(0);
-
-  // const increaseCount = (): void => {
-  //   setCount(count + 1);
-  // };
-  // const decreaseCount = (): void => {
-  //   if (count < 1) return;
-  //   setCount(count - 1);
-  // };
   const onIncrease = () => {
     dispatch(increase());
   };
