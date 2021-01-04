@@ -9,8 +9,6 @@ const ssrMiddleware: Middleware = async (ctx, next) => {
      */
     const renderResult = await serverRender({ url: ctx.url });
 
-    console.log('RENDER RESULT:: ', renderResult);
-
     if (!renderResult) {
       return next();
     }

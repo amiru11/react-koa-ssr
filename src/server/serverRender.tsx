@@ -47,7 +47,7 @@ const statsFile = path.resolve(__dirname, '../build/loadable-stats.json');
 
 // 서버사이드 렌더링을 처리 할 핸들러 함수입니다.
 const serverRender = async ({ url }: IServerRenderProps) => {
-  console.log('URL: ', url, process.env.PUBLIC_URL);
+  console.log('URL: ', url);
   // prepare redux store
   const store = createStore(rootReducer);
   const context = {
@@ -73,7 +73,6 @@ const serverRender = async ({ url }: IServerRenderProps) => {
   );
 
   const content = ReactDOMServer.renderToString(extractor.collectChunks(Root)); // React 엘리먼트의 초기 HTML을 렌더링합니다.
-  console.log('CONTENT: ', content);
   const html = (
     <Html
       content={content}
