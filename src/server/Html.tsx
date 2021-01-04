@@ -6,7 +6,7 @@ export type THtmlProps = {
   content: string;
   extractor: ChunkExtractor;
   helmet: HelmetData;
-  reduxState?: any;
+  rootStore?: any;
 };
 
 const favicons = [
@@ -36,7 +36,8 @@ const favicons = [
   },
 ];
 
-function Html({ content, extractor, helmet, reduxState }: THtmlProps) {
+function Html({ content, extractor, helmet, rootStore }: THtmlProps) {
+  console.log('rootStore', { ...rootStore });
   return (
     <html>
       {/* <head dangerouslySetInnerHTML={{ __html: head }}></head> */}
@@ -60,9 +61,9 @@ function Html({ content, extractor, helmet, reduxState }: THtmlProps) {
         <div id='root' dangerouslySetInnerHTML={{ __html: content }} />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.__REDUX_STATE__=${JSON.stringify(
-              reduxState
-            ).replace(/</g, '\\u003c')};`,
+            __html: `window.__INITIAL_STATE__=${JSON.stringify({
+              counterStore: rootStore.counterStore.toJson(),
+            })};`,
           }}
         />
         {extractor.getScriptElements()}

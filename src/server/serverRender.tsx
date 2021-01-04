@@ -2,14 +2,13 @@ import path from 'path';
 // import fs from 'fs';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom';
+import { Provider } from 'mobx-react';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { FilledContext, HelmetProvider } from 'react-helmet-async';
 import App from '../shared/App';
 import Html from './Html';
-import rootReducer from '../modules';
+import RootStore from '../store';
 
 /**
  * import ReactDOMServer from 'react-dom/server';
@@ -49,7 +48,7 @@ const statsFile = path.resolve(__dirname, '../build/loadable-stats.json');
 const serverRender = async ({ url }: IServerRenderProps) => {
   console.log('URL: ', url);
   // prepare redux store
-  const store = createStore(rootReducer);
+  const store = new RootStore();
   const context = {
     statusCode: 200,
   };
@@ -63,7 +62,7 @@ const serverRender = async ({ url }: IServerRenderProps) => {
   const Root: JSX.Element = (
     <ChunkExtractorManager extractor={extractor}>
       <HelmetProvider context={helmetContext}>
-        <Provider store={store}>
+        <Provider {...store}>
           <StaticRouter location={url} context={context}>
             <App />
           </StaticRouter>
@@ -76,7 +75,7 @@ const serverRender = async ({ url }: IServerRenderProps) => {
   const html = (
     <Html
       content={content}
-      reduxState={store.getState()}
+      rootStore={store}
       extractor={extractor}
       helmet={helmetContext.helmet}
     />

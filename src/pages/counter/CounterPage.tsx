@@ -1,36 +1,42 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'modules';
-import { increase, decrease, increaseBy } from 'modules/counter';
+import React, { Component } from 'react';
+import { observer, inject } from 'mobx-react';
 import classNames from 'classnames/bind';
 import styles from 'pages/counter/Counter.module.scss';
-
-// const { useState } = React;
+import { ICounterStore } from 'store/interfaces/store';
+interface ICounterPageProps {
+  counterStore?: ICounterStore;
+}
 
 const cx = classNames.bind(styles);
 
-function CounterPage(): JSX.Element {
-  const count = useSelector((state: RootState) => state.counter.count); // Get State from redux
-  const dispatch = useDispatch(); // Get Dispatch from redux
-
-  const onIncrease = () => {
-    dispatch(increase());
+@inject('counterStore')
+@observer
+class CounterPage extends Component<ICounterPageProps> {
+  onIncrease = () => {
+    const { increase } = this.props.counterStore;
+    increase();
   };
-  const onDecrease = () => {
-    dispatch(decrease());
-  };
-  const onIncreaseBy = (count: number) => {
-    dispatch(increaseBy(count));
+  onDecrease = () => {
+    const { decrease } = this.props.counterStore;
+    decrease();
   };
 
-  return (
-    <div className={cx('counter-container')}>
-      <h1>Counter: {count}</h1>
-      <button onClick={onIncrease}>+1</button>
-      <button onClick={onDecrease}>-1</button>
-      <button onClick={() => onIncreaseBy(5)}>+5</button>
-    </div>
-  );
+  onIncreaseBy = (counter: number) => {
+    const { increaseBy } = this.props.counterStore;
+    increaseBy(counter);
+  };
+
+  render() {
+    const { counter } = this.props.counterStore;
+    return (
+      <div className={cx('counter-container')}>
+        <h1>Counter: {counter}</h1>
+        <button onClick={this.onIncrease}>+1</button>
+        <button onClick={this.onDecrease}>-1</button>
+        <button onClick={() => this.onIncreaseBy(5)}>+5</button>
+      </div>
+    );
+  }
 }
 
 export default CounterPage;
